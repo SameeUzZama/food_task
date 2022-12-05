@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import PopularOnes from "./PopularOnes";
 import YourTest from "./YourTest";
+import PercentIcon from "@mui/icons-material/Percent";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 
 export const Home = () => {
   const [data, setData] = useState([]);
@@ -26,14 +28,14 @@ export const Home = () => {
 
   return (
     <Box>
-      <Paper sx={{ zIndex: "99" }}>
+      <Paper>
         <Typography>Pre Order From </Typography>
         <Typography>Connaught Place </Typography>
       </Paper>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Card
           sx={{
-            width:180,
+            width: 180,
             height: 120,
             borderRadius: "20px",
             mt: 1,
@@ -49,25 +51,39 @@ export const Home = () => {
             >
               Samee
             </Typography>
-            <Typography
-              sx={{ fontSize: 14 }}
-              gutterBottom
-            >
+            <Typography sx={{ fontSize: 14 }} gutterBottom>
               Let's explore this evening
             </Typography>
-            <Typography variant="h5" component="div"></Typography>
           </CardContent>
         </Card>
-        <Box>
-          <Typography>Offers</Typography>
-          <Typography>Wallet</Typography>
+        <Box sx={{ display: "flex", flexDirection: "row", m: 2 }}>
+          <Box sx={{ textAlign: "center" }}>
+            <Box
+              sx={{
+                backgroundColor: "lightpink",
+                borderRadius: 4,
+                p: 2,
+                m: 1,
+              }}
+            >
+              <PercentIcon />
+            </Box>
+            <Typography>Offers</Typography>
+          </Box>
+          <Box sx={{ textAlign: "center" }}>
+            <Box
+              sx={{ backgroundColor: "lightBlue", borderRadius: 4, p: 2, m: 1 }}
+            >
+              <AccountBalanceWalletIcon />
+            </Box>
+            <Typography>Wallet</Typography>
+          </Box>
         </Box>
       </Box>
       <Box sx={{ mt: 5 }}>
         <YourTest data={data} />
       </Box>
       <Box sx={{ mt: 5 }}>
-        
         <PopularOnes data={data} />
       </Box>
     </Box>

@@ -12,7 +12,7 @@ export const YourTest = ({ data }) => {
   };
   const setting = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -20,12 +20,12 @@ export const YourTest = ({ data }) => {
   return (
     <>
       <Box>
-        <Typography variant="h5" >Your taste</Typography>
+        <Typography variant="h5">Your taste</Typography>
         <Slider {...settings}>
-          {data?.map((item,index) => {
+          {data?.map((item, index) => {
             return (
               <Card
-              key={index}
+                key={index}
                 sx={{
                   height: 250,
                   borderRadius: "20px",
@@ -52,11 +52,10 @@ export const YourTest = ({ data }) => {
       </Box>
       <div>
         <Slider {...setting}>
-          {data?.map((item,index) => {
+          {data?.map((item, index) => {
             return (
               <Card
-              key={index}
-
+                key={index}
                 sx={{
                   height: 170,
                   borderRadius: "20px",

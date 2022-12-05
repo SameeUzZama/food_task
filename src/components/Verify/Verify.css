@@ -1,7 +1,7 @@
-.title {
+.o-title {
   padding-left: 24px;
 }
-.Enter-Text {
+.o-Enter-Text {
   font-style: normal !important;
   font-weight: 700 !important;
   font-size: 26px !important;
@@ -9,41 +9,35 @@
   letter-spacing: -0.01em !important;
   color: #1e232c !important;
 }
-.description-Text {
+.o-description-Text {
   font-style: normal !important;
   font-weight: 500 !important;
   font-size: 16px !important;
   line-height: 150% !important;
-  color: #8391A1 !important;
+  color: #8391a1 !important;
 }
-.login-box-Minput{
-    margin-top: 39px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    padding-left: 23px;
+.o-login-box-Minput {
+  margin-top: 39px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-left: 23px;
 }
-.Otp-input:nth-child(4){
-    height: 100px !important;
+.o-Otp-input-parent {
+  display: flex;
+  flex-direction: column;
 }
-.Otp-input-parent{
-    display: flex;
-    flex-direction: column;
+.o-Send-Button {
+  height: 56px;
+  width: 330px;
+  background-color: #ff6d6a !important;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 18px !important;
 }
-.Email-input::placeholder{
-    padding: 19px 0px 18px 20px !important;
-}
-.Send-Button{
-    height: 56px;
-    width:330px;
-    background-color: #FF6D6A !important;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    line-height: 18px !important;
-}
-.resend-otp{
-    text-align: center;
-    padding: 20px;
+.resend-otp {
+  text-align: center;
+  padding: 20px;
 }

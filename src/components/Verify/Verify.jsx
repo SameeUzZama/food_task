@@ -26,9 +26,23 @@ export const Verify = () => {
 
   return (
     <>
-    <Box sx={{position:"absolute", top:"20px", left:"20px", color:"black", height:40, width:40, backgroundColor:"white", borderRadius:2, display:"flex", justifyContent:"center", alignItems:"center"}}>
-          <ArrowBackIosIcon onClick={()=>window.history.go(-1)} />
-        </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          top: "20px",
+          left: "20px",
+          color: "black",
+          height: 40,
+          width: 40,
+          backgroundColor: "white",
+          borderRadius: 2,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <ArrowBackIosIcon onClick={() => window.history.go(-1)} />
+      </Box>
       <Grid
         container
         sx={{
@@ -39,15 +53,15 @@ export const Verify = () => {
         }}
       >
         <Grid item xs={12}>
-          <Box className="login-Box">
-            <Box className="title">
-              <Typography className="Enter-Text">OTP Verification</Typography>
-              <Typography className="description-Text">
+          <Box>
+            <Box className="o-title">
+              <Typography className="o-Enter-Text">OTP Verification</Typography>
+              <Typography className="o-description-Text">
                 Enter the verification code we just sent on your mobile Number
               </Typography>
             </Box>
-            <Box className="login-box-Minput">
-              <Box className="Otp-input-parent">
+            <Box className="o-login-box-Minput">
+              <Box className="o-Otp-input-parent">
                 <OTPInput
                   onChange={(e) => setOtp(e)}
                   value={otp}
@@ -55,8 +69,8 @@ export const Verify = () => {
                   OTPLength={6}
                   otpType="number"
                   disabled={false}
-                  className="Otp-input"
-                  placeholder={[1,2,3,4,5,6]}
+                  className="o-Otp-input"
+                  placeholder={[1, 2, 3, 4, 5, 6]}
                 />
               </Box>
               <Button
@@ -65,7 +79,7 @@ export const Verify = () => {
                 onClick={() => {
                   verifyOTP();
                 }}
-                className="Send-Button"
+                className="o-Send-Button"
               >
                 Verify
               </Button>
